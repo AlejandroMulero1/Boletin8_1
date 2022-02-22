@@ -35,10 +35,11 @@ public class ArrayEj1 {
         }
 
         arrayDePares = new int[numPares];
-
-        for(int i = 0; i < arrayDePares.length; i++) {
+        int j=0;
+        for(int i = 0; i < array1.length; i++) {
             if (array1[i] % 2 == 0) {
-                arrayDePares[i] = array1[i];
+                arrayDePares[j] = array1[i];
+                j++;
             }
         }
 
@@ -168,7 +169,7 @@ public class ArrayEj1 {
         Metodo con la misma estructura que el metodo encontrarRepetido pero si el numero introducido es igual a uno
         del array no lo modificaremos, devolveremos la posicion
          */
-        public static void encontrarNum(int[] array,int num){
+        public static int encontrarNum(int[] array,int num){
             boolean repetido = false;
             int resultado=-1;
             for(int i = 0; i < array.length; ++i) {
@@ -178,11 +179,13 @@ public class ArrayEj1 {
                 }
             }
 
-        if(repetido=false){
-            resultado=-1;
+        if(repetido){
+            return resultado;
+        }
+        else{
+            return -1;
         }
 
-            System.out.println(resultado);
     }
     }
 

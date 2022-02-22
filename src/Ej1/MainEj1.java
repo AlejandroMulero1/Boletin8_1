@@ -10,13 +10,14 @@ public class MainEj1 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int[] array = new int[20];
-        int opcion=1;
+        int opcion;
 
+        menu();
+        opcion= sc.nextInt();
         switch (opcion){
             case 1:
                 llenarArray(array);
-                generarArrayDePares(array);
-                ensenarArray(array);
+                ensenarArray(generarArrayDePares(array));
                 break;
 
             case 2:
@@ -26,8 +27,7 @@ public class MainEj1 {
 
             case 3:
                 llenarArray(array);
-                generarArrayDePrimos(array);
-                ensenarArray(array);
+                ensenarArray(generarArrayDePrimos(array));
                 break;
 
             case 4:
@@ -38,12 +38,21 @@ public class MainEj1 {
 
             case 5:
                 llenarArray(array);
+                System.out.println("Introduzca un número");
                 int num= sc.nextInt();
-                encontrarNum(array, num);
+                System.out.println(encontrarNum(array, num));
                 break;
         }
 
 
     }
 
+    public static void menu(){
+        System.out.println("Elija el apartado a realizar:");
+        System.out.println("1.Generar un array con los numeros pares de otro array generado aleatoriamente");
+        System.out.println("2.Generar otro array aleatoriamente sin numeros repetidos");
+        System.out.println("3.Generar un array aleatoriamente de numeros primos");
+        System.out.println("4.Invertir un array generado aleatoriamente");
+        System.out.println("5.Intentar al adivinar un numero de un array generado aleatoriamente");
+    }
 }
