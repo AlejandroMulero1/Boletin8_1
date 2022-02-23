@@ -187,6 +187,16 @@ public class ArrayEj1 {
         }
 
     }
+
+    public static void menu(){
+        System.out.println("Elija el apartado a realizar:");
+        System.out.println("1.Generar un array con los numeros pares de otro array generado aleatoriamente");
+        System.out.println("2.Generar otro array aleatoriamente sin numeros repetidos");
+        System.out.println("3.Generar un array aleatoriamente de numeros primos");
+        System.out.println("4.Invertir un array generado aleatoriamente");
+        System.out.println("5.Intentar al adivinar un numero de un array generado aleatoriamente");
+    }
+
     }
 
 
